@@ -53,7 +53,11 @@ export default function App() {
         <input
           type="file"
           accept="video/mp4"
-          onChange={(e) => setFile(e.target.files[0])}
+          onChange={(e) => {
+  if (e.target.files && e.target.files.length > 0) {
+    setFile(e.target.files[0]);
+  }
+}}
         />
 
         <br /><br />
