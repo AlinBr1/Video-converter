@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function App() {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [status, setStatus] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
 
